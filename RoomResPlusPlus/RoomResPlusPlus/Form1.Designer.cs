@@ -28,6 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.SuspendLayout();
             this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -42,12 +45,13 @@
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button1);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
+
             this.ResumeLayout(false);
 
         }
@@ -55,6 +59,7 @@
         #endregion
 
         private System.Windows.Forms.Button button1;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }
 
