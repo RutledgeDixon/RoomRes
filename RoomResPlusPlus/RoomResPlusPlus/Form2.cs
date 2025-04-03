@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
@@ -7,21 +8,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Newtonsoft.Json;
 
 namespace RoomResPlusPlus
 {
     public partial class Form2 : Form
     {
 
-        List<(string Username, string Password)> userCredentials = new List<(string, string)>
-            {
-                ("user1", "password1"),
-                ("user2", "password2"),
-                ("user3", "password3")
-            };
+        
+
+        private const string FilePath = "userCredentials.json";
+        private List<(string Username, string Password)> userCredentials;
         public Form2()
         {
             InitializeComponent();
+            userCredentials = LoadUserCredentials();
         }
 
         private void Button1_Click(object sender, EventArgs e)
@@ -50,5 +51,31 @@ namespace RoomResPlusPlus
                 password.Text = "";
             }
         }
+        private List<(string Username, string Password)> LoadUserCredentials()
+        {
+            if (File.Exists(FilePath))
+            {
+                string json = File.ReadAllText(FilePath);
+                return JsonConvert.DeserializeObject<List<(string Username, string Password)>>(json);
+            }
+            else
+            {
+                var initialCredentials = new List<(string Username, string Password)>
+                {
+                    ("user1", "password1"),
+                    ("user2", "password2"),
+                    ("user3", "password3")
+                };
+                SaveUserCredentials(initialCredentials);
+                return initialCredentials;
+            }
+        }
+
+        private void SaveUserCredentials(List<(string Username, string Password)> credentials)
+        {
+            string json = JsonConvert.SerializeObject(credentials);
+            File.WriteAllText(FilePath, json);
+        }
+        
     }
 }
