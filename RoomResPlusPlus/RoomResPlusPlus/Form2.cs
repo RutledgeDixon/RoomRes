@@ -33,11 +33,21 @@ namespace RoomResPlusPlus
 
             if (isAuthenticated)
             {
-                MessageBox.Show("Login Successful");
+                // for testing
+                //MessageBox.Show("Login Successful");
+
+                // open the main form
+                Form1 form1 = new Form1();
+                form1.Show();
+
+                // hide this form
+                this.Hide();
             }
             else
             {
                 MessageBox.Show("Login Failed");
+                //email.Text = "";
+                password.Text = "";
             }
         }
     }

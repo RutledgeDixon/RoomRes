@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.password = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.RoomResTitle = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.email = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.password = new System.Windows.Forms.TextBox();
             this.signIn = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -60,6 +60,27 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 22.12389F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(822, 463);
             this.tableLayoutPanel1.TabIndex = 0;
+            // 
+            // password
+            // 
+            this.password.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.password.Font = new System.Drawing.Font("Monotype Corsiva", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.password.Location = new System.Drawing.Point(248, 317);
+            this.password.Name = "password";
+            this.password.PasswordChar = '*';
+            this.password.Size = new System.Drawing.Size(325, 34);
+            this.password.TabIndex = 6;
+            this.password.UseSystemPasswordChar = true;
+            // 
+            // label2
+            // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label2.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(247, 271);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(328, 29);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "Password:                   ";
             // 
             // RoomResTitle
             // 
@@ -92,25 +113,6 @@
             this.email.Name = "email";
             this.email.Size = new System.Drawing.Size(325, 34);
             this.email.TabIndex = 4;
-            // 
-            // label2
-            // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label2.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(247, 271);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(328, 29);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "Password:                   ";
-            // 
-            // password
-            // 
-            this.password.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.password.Font = new System.Drawing.Font("Monotype Corsiva", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.password.Location = new System.Drawing.Point(248, 317);
-            this.password.Name = "password";
-            this.password.Size = new System.Drawing.Size(325, 34);
-            this.password.TabIndex = 6;
             // 
             // signIn
             // 
