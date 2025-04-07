@@ -32,16 +32,16 @@
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.button1 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.treeView1 = new System.Windows.Forms.TreeView();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.treeView1 = new System.Windows.Forms.TreeView();
             this.form1BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel3.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -74,6 +74,17 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(217, 449);
             this.panel3.TabIndex = 2;
+            // 
+            // label3
+            // 
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label3.Location = new System.Drawing.Point(2, 108);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(212, 69);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "Select a highlighted room for more details";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // comboBox1
             // 
@@ -123,6 +134,17 @@
             this.panel5.Size = new System.Drawing.Size(505, 449);
             this.panel5.TabIndex = 3;
             // 
+            // treeView1
+            // 
+            this.treeView1.AccessibleName = "Menu_Tree";
+            this.treeView1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.treeView1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.treeView1.Location = new System.Drawing.Point(0, 0);
+            this.treeView1.Name = "treeView1";
+            this.treeView1.Size = new System.Drawing.Size(121, 449);
+            this.treeView1.TabIndex = 1;
+            this.treeView1.Visible = false;
+            // 
             // pictureBox2
             // 
             this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -165,28 +187,6 @@
             this.button2.Text = ">";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // label3
-            // 
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label3.Location = new System.Drawing.Point(2, 108);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(212, 69);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Select a highlighted room for more details";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // treeView1
-            // 
-            this.treeView1.AccessibleName = "Menu_Tree";
-            this.treeView1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.treeView1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.treeView1.Location = new System.Drawing.Point(0, 0);
-            this.treeView1.Name = "treeView1";
-            this.treeView1.Size = new System.Drawing.Size(121, 449);
-            this.treeView1.TabIndex = 1;
-            this.treeView1.Visible = false;
             // 
             // form1BindingSource
             // 

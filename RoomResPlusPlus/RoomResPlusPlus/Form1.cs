@@ -12,6 +12,8 @@ namespace RoomResPlusPlus
 {
     public partial class Form1 : Form
     {
+        bool treeView_invisible = true;
+
         public Form1()
         {
             InitializeComponent();
@@ -24,15 +26,17 @@ namespace RoomResPlusPlus
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if (treeView1.Visible = true){
+            if (treeView_invisible)
+            {
+                treeView1.Visible = true;
+                treeView_invisible = false;
                 button2.Text = "<";
-                treeView1.Visible = false;
-                treeView1
             }
             else
             {
+                treeView1.Visible = false;
+                treeView_invisible = true;
                 button2.Text = ">";
-                treeView1.Visible = true;
             }
         }
     }
