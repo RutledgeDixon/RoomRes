@@ -21,5 +21,19 @@ namespace RoomResPlusPlus
         {
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (treeView1.Visible = true){
+                button2.Text = "<";
+                treeView1.Visible = false;
+                treeView1
+            }
+            else
+            {
+                button2.Text = ">";
+                treeView1.Visible = true;
+            }
+        }
     }
 }
