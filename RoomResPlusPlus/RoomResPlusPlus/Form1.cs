@@ -21,7 +21,26 @@ namespace RoomResPlusPlus
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            // Add root nodes
+            TreeNode rootNode1 = new TreeNode("Help");
+            TreeNode rootNode2 = new TreeNode("Settings");
 
+            // Add child nodes
+            rootNode1.Nodes.Add("About");
+            rootNode1.Nodes.Add("Instructions");
+            rootNode2.Nodes.Add("Dark Mode");
+
+            // Add root nodes to TreeView
+            treeView1.Nodes.Add(rootNode1);
+            treeView1.Nodes.Add(rootNode2);
+
+            // Customize appearance
+            //treeView1.BackColor = Color.Black;
+            treeView1.ForeColor = Color.White;
+            treeView1.Font = new Font("Arial", 16, FontStyle.Regular);
+
+            // Handle AfterSelect event
+            treeView1.AfterSelect += treeView1_AfterSelect;
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -38,6 +57,11 @@ namespace RoomResPlusPlus
                 treeView_invisible = true;
                 button2.Text = ">";
             }
+        }
+
+        private void treeView1_AfterSelect(object sender, TreeViewEventArgs e)
+        {
+            MessageBox.Show("Selected Node: " + e.Node.Text);
         }
     }
 }
