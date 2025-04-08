@@ -13,6 +13,7 @@ namespace RoomResPlusPlus
     public partial class Form1 : Form
     {
         bool treeView_invisible = true;
+        bool darkMode = true;
 
         public Form1()
         {
@@ -21,6 +22,9 @@ namespace RoomResPlusPlus
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            // Unsubscribe to prevent duplicate subscriptions
+            treeView1.AfterSelect -= treeView1_AfterSelect;
+
             // Add root nodes
             TreeNode rootNode1 = new TreeNode("Help");
             TreeNode rootNode2 = new TreeNode("Settings");
@@ -39,6 +43,8 @@ namespace RoomResPlusPlus
             treeView1.ForeColor = Color.White;
             treeView1.Font = new Font("Arial", 16, FontStyle.Regular);
 
+            AdjustTreeViewHeight(); // Adjust height based on node count
+
             // Handle AfterSelect event
             treeView1.AfterSelect += treeView1_AfterSelect;
         }
@@ -48,6 +54,8 @@ namespace RoomResPlusPlus
             if (treeView_invisible)
             {
                 treeView1.Visible = true;
+                treeView1.Refresh(); // Ensure the TreeView is refreshed
+                //treeView1.Focus();   // Set focus to the TreeView
                 treeView_invisible = false;
                 button2.Text = "<";
             }
@@ -59,9 +67,15 @@ namespace RoomResPlusPlus
             }
         }
 
+
         private void treeView1_AfterSelect(object sender, TreeViewEventArgs e)
         {
-            if(e.Node.Text == "About")
+            
+            if (e.Node.Text == "Help" || e.Node.Text == "Settings")
+            {
+                //do nothing
+            }
+            else if(e.Node.Text == "About")
             {
                 MessageBox.Show("Room Reservation++\r\nWritten by Josh, Rutledge, and Will\r\nSP25 SE1 Project");
             }
@@ -69,10 +83,61 @@ namespace RoomResPlusPlus
             {
                 MessageBox.Show("1. Click on the building you want to reserve a room in.\r\n2. Select a floor (if appllicable).\r\n3. Select an available room and create a schedule");
             }
+            else if(e.Node.Text == "Dark Mode")
+            {
+                String darkColor = "#444444";
+                String blueColor = "#000040";
+
+                if (darkMode == false)
+                {
+                    panel3.BackColor = ColorTranslator.FromHtml(blueColor);
+                    panel1.BackColor = ColorTranslator.FromHtml("#FF8000");
+                    panel5.BackColor = ColorTranslator.FromHtml(blueColor);
+                    treeView1.BackColor = ColorTranslator.FromHtml(blueColor);
+
+                    darkMode = true;
+                }
+                else
+                {
+                    panel3.BackColor = ColorTranslator.FromHtml(darkColor);
+                    panel1.BackColor = ColorTranslator.FromHtml(darkColor);
+                    panel5.BackColor = ColorTranslator.FromHtml(darkColor);
+                    treeView1.BackColor = ColorTranslator.FromHtml(darkColor);
+
+                    darkMode = false;
+                }
+
+                //change the selected node to the parent node so that
+                // this node can be clicked multiple times in a row
+                treeView1.SelectedNode = e.Node.Parent;
+
+            }
             else
             {
                 MessageBox.Show("Selected Node: " + e.Node.Text);
             }      
+        }
+
+        private void AdjustTreeViewHeight()
+        {
+            int nodeHeight = treeView1.ItemHeight; // Height of a single node
+            int totalNodes = GetTotalNodeCount(treeView1.Nodes); // Total number of nodes (including child nodes)
+            int padding = 10; // Optional padding for aesthetics
+
+            // Set the TreeView height based on the total node count
+            treeView1.Height = (nodeHeight * totalNodes) + padding;
+        }
+
+        // Helper method to count all nodes (including child nodes)
+        private int GetTotalNodeCount(TreeNodeCollection nodes)
+        {
+            int count = 0;
+            foreach (TreeNode node in nodes)
+            {
+                count++; // Count the current node
+                count += GetTotalNodeCount(node.Nodes); // Recursively count child nodes
+            }
+            return count;
         }
     }
 }
