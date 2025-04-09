@@ -16,6 +16,7 @@ namespace RoomResPlusPlus
         bool treeView_invisible = true;
         object last_selected_building;
         Dictionary<Button, String> building_buttons = new Dictionary<Button, String>();
+        
         public Form1()
         {
             InitializeComponent();

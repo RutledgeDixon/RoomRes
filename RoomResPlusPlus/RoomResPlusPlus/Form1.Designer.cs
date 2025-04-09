@@ -45,6 +45,8 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
             this.form1BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.roomInfoPanel = new System.Windows.Forms.Panel();
+            this.roomFlowPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.panel3.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -68,6 +70,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel3.AutoSize = true;
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.panel3.Controls.Add(this.roomFlowPanel);
             this.panel3.Controls.Add(this.label3);
             this.panel3.Controls.Add(this.comboBox1);
             this.panel3.Controls.Add(this.label2);
@@ -152,6 +155,7 @@
             // panel2
             // 
             this.panel2.BackgroundImage = global::RoomResPlusPlus.Properties.Resources.CampusMap;
+            this.panel2.Controls.Add(this.roomInfoPanel);
             this.panel2.Controls.Add(this.button4);
             this.panel2.Controls.Add(this.button3);
             this.panel2.Location = new System.Drawing.Point(0, 0);
@@ -228,14 +232,29 @@
             // 
             this.form1BindingSource.DataSource = typeof(RoomResPlusPlus.Form1);
             // 
+            // roomInfoPanel
+            // 
+            this.roomInfoPanel.Location = new System.Drawing.Point(127, 0);
+            this.roomInfoPanel.Name = "roomInfoPanel";
+            this.roomInfoPanel.Size = new System.Drawing.Size(385, 193);
+            this.roomInfoPanel.TabIndex = 4;
+            this.roomInfoPanel.Visible = false;
+            // 
+            // roomFlowPanel
+            // 
+            this.roomFlowPanel.Location = new System.Drawing.Point(6, 181);
+            this.roomFlowPanel.Name = "roomFlowPanel";
+            this.roomFlowPanel.Size = new System.Drawing.Size(208, 257);
+            this.roomFlowPanel.TabIndex = 4;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel3);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel5);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -269,6 +288,8 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Panel roomInfoPanel;
+        private System.Windows.Forms.FlowLayoutPanel roomFlowPanel;
     }
 }
 
