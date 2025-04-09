@@ -47,24 +47,19 @@ namespace RoomResPlusPlus
 
         private void Building_selected(Object sended, EventArgs e)
         {
-            panel3.Visible = true;
             if (sended is Button sender)
             {
+                panel3.Visible = true;
                 if ((last_selected_building != null) && (last_selected_building is Button temp) && (temp != sender))
                 {
                     temp.FlatAppearance.BorderColor = Color.FromArgb(0, 0, 0, 0);
-                    sender.FlatAppearance.BorderColor = Color.LightYellow;
-                    last_selected_building = sender;
-                    String da_building;
-                    building_buttons.TryGetValue(sender, out da_building);
-                    panel3.Visible = true;
-                    label2.Text = da_building;
                 }
-                else if ((last_selected_building is Button temp2) && (temp2 == sender))
-                {
-                    panel3.Visible = false;
-                    sender.FlatAppearance.BorderColor = Color.FromArgb(0, 0, 0, 0);
-                }
+                sender.FlatAppearance.BorderColor = Color.LightYellow;
+                last_selected_building = sender;
+                String da_building;
+                building_buttons.TryGetValue(sender, out da_building);
+                panel3.Visible = true;
+                label2.Text = da_building;
             }
         }
     }
