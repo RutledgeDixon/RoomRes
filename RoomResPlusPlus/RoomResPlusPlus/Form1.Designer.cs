@@ -38,22 +38,22 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.treeView1 = new System.Windows.Forms.TreeView();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.treeView1 = new System.Windows.Forms.TreeView();
             this.roomInfoPanel = new System.Windows.Forms.Panel();
+            this.reservationList = new System.Windows.Forms.ListBox();
+            this.errorLabel = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.button5 = new System.Windows.Forms.Button();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
             this.form1BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.button5 = new System.Windows.Forms.Button();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.errorLabel = new System.Windows.Forms.Label();
-            this.reservationList = new System.Windows.Forms.ListBox();
             this.panel3.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -148,7 +148,6 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel5.AutoSize = true;
-            this.panel5.Controls.Add(this.treeView1);
             this.panel5.Controls.Add(this.panel2);
             this.panel5.Controls.Add(this.pictureBox1);
             this.panel5.ImeMode = System.Windows.Forms.ImeMode.NoControl;
@@ -157,23 +156,10 @@
             this.panel5.Size = new System.Drawing.Size(505, 453);
             this.panel5.TabIndex = 3;
             // 
-            // treeView1
-            // 
-            this.treeView1.AccessibleName = "Menu_Tree";
-            this.treeView1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.treeView1.CausesValidation = false;
-            this.treeView1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.treeView1.HotTracking = true;
-            this.treeView1.Location = new System.Drawing.Point(0, 0);
-            this.treeView1.Name = "treeView1";
-            this.treeView1.Size = new System.Drawing.Size(175, 30);
-            this.treeView1.TabIndex = 1;
-            this.treeView1.Visible = false;
-            this.treeView1.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeView1_AfterSelect);
-            // 
             // panel2
             // 
             this.panel2.BackgroundImage = global::RoomResPlusPlus.Properties.Resources.CampusMap;
+            this.panel2.Controls.Add(this.treeView1);
             this.panel2.Controls.Add(this.roomInfoPanel);
             this.panel2.Controls.Add(this.button4);
             this.panel2.Controls.Add(this.button3);
@@ -181,6 +167,20 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(500, 450);
             this.panel2.TabIndex = 3;
+            // 
+            // treeView1
+            // 
+            this.treeView1.AccessibleName = "Menu_Tree";
+            this.treeView1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.treeView1.CausesValidation = false;
+            this.treeView1.Cursor = System.Windows.Forms.Cursors.Default;
+            this.treeView1.HotTracking = true;
+            this.treeView1.Location = new System.Drawing.Point(3, 0);
+            this.treeView1.Name = "treeView1";
+            this.treeView1.Size = new System.Drawing.Size(175, 30);
+            this.treeView1.TabIndex = 1;
+            this.treeView1.Visible = false;
+            this.treeView1.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeView1_AfterSelect);
             // 
             // roomInfoPanel
             // 
@@ -196,6 +196,71 @@
             this.roomInfoPanel.Size = new System.Drawing.Size(385, 193);
             this.roomInfoPanel.TabIndex = 4;
             this.roomInfoPanel.Visible = false;
+            // 
+            // reservationList
+            // 
+            this.reservationList.FormattingEnabled = true;
+            this.reservationList.Items.AddRange(new object[] {
+            "Ligma Balls"});
+            this.reservationList.Location = new System.Drawing.Point(4, 12);
+            this.reservationList.Name = "reservationList";
+            this.reservationList.Size = new System.Drawing.Size(367, 95);
+            this.reservationList.TabIndex = 6;
+            // 
+            // errorLabel
+            // 
+            this.errorLabel.AutoSize = true;
+            this.errorLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.errorLabel.ForeColor = System.Drawing.Color.Coral;
+            this.errorLabel.Location = new System.Drawing.Point(3, 108);
+            this.errorLabel.Name = "errorLabel";
+            this.errorLabel.Size = new System.Drawing.Size(369, 15);
+            this.errorLabel.TabIndex = 5;
+            this.errorLabel.Text = "Error: Conflict with existing reservation.  Please pick a different time";
+            this.errorLabel.Visible = false;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label5.Location = new System.Drawing.Point(145, 164);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(20, 13);
+            this.label5.TabIndex = 4;
+            this.label5.Text = "To";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label4.Location = new System.Drawing.Point(145, 134);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(30, 13);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "From";
+            // 
+            // dateTimePicker2
+            // 
+            this.dateTimePicker2.Location = new System.Drawing.Point(178, 130);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker2.TabIndex = 2;
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(4, 131);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(135, 49);
+            this.button5.TabIndex = 1;
+            this.button5.Text = "Make Reservation";
+            this.button5.UseVisualStyleBackColor = true;
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(178, 160);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker1.TabIndex = 0;
             // 
             // button4
             // 
@@ -245,7 +310,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(70, 450);
+            this.panel1.Size = new System.Drawing.Size(70, 389);
             this.panel1.TabIndex = 0;
             // 
             // button2
@@ -262,81 +327,12 @@
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // form1BindingSource
-            // 
-            this.form1BindingSource.DataSource = typeof(RoomResPlusPlus.Form1);
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(178, 160);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 0;
-            // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(4, 131);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(135, 49);
-            this.button5.TabIndex = 1;
-            this.button5.Text = "Make Reservation";
-            this.button5.UseVisualStyleBackColor = true;
-            // 
-            // dateTimePicker2
-            // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(178, 130);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker2.TabIndex = 2;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label4.Location = new System.Drawing.Point(145, 134);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(30, 13);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "From";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label5.Location = new System.Drawing.Point(145, 164);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(20, 13);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "To";
-            // 
-            // errorLabel
-            // 
-            this.errorLabel.AutoSize = true;
-            this.errorLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.errorLabel.ForeColor = System.Drawing.Color.Coral;
-            this.errorLabel.Location = new System.Drawing.Point(3, 108);
-            this.errorLabel.Name = "errorLabel";
-            this.errorLabel.Size = new System.Drawing.Size(369, 15);
-            this.errorLabel.TabIndex = 5;
-            this.errorLabel.Text = "Error: Conflict with existing reservation.  Please pick a different time";
-            this.errorLabel.Visible = false;
-            // 
-            // reservationList
-            // 
-            this.reservationList.FormattingEnabled = true;
-            this.reservationList.Items.AddRange(new object[] {
-            "Ligma Balls"});
-            this.reservationList.Location = new System.Drawing.Point(6, 10);
-            this.reservationList.Name = "reservationList";
-            this.reservationList.Size = new System.Drawing.Size(367, 95);
-            this.reservationList.TabIndex = 6;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(685, 389);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel5);
