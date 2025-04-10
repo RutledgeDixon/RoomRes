@@ -38,8 +38,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.treeView1 = new System.Windows.Forms.TreeView();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.treeView1 = new System.Windows.Forms.TreeView();
             this.roomInfoPanel = new System.Windows.Forms.Panel();
             this.reservationList = new System.Windows.Forms.ListBox();
             this.errorLabel = new System.Windows.Forms.Label();
@@ -83,17 +83,17 @@
             this.panel3.Controls.Add(this.comboBox1);
             this.panel3.Controls.Add(this.label2);
             this.panel3.Controls.Add(this.label1);
-            this.panel3.Location = new System.Drawing.Point(1166, 0);
-            this.panel3.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.panel3.Location = new System.Drawing.Point(1160, 0);
+            this.panel3.Margin = new System.Windows.Forms.Padding(6);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(434, 863);
+            this.panel3.Size = new System.Drawing.Size(434, 890);
             this.panel3.TabIndex = 2;
             this.panel3.Visible = false;
             // 
             // roomFlowPanel
             // 
             this.roomFlowPanel.Location = new System.Drawing.Point(12, 348);
-            this.roomFlowPanel.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.roomFlowPanel.Margin = new System.Windows.Forms.Padding(6);
             this.roomFlowPanel.Name = "roomFlowPanel";
             this.roomFlowPanel.Size = new System.Drawing.Size(416, 494);
             this.roomFlowPanel.TabIndex = 4;
@@ -116,7 +116,7 @@
             this.comboBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(92, 162);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(6);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(238, 33);
             this.comboBox1.TabIndex = 2;
@@ -158,10 +158,23 @@
             this.panel5.Controls.Add(this.pictureBox1);
             this.panel5.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.panel5.Location = new System.Drawing.Point(154, 0);
-            this.panel5.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.panel5.Margin = new System.Windows.Forms.Padding(6);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1010, 871);
+            this.panel5.Size = new System.Drawing.Size(1026, 898);
             this.panel5.TabIndex = 3;
+            // 
+            // panel2
+            // 
+            this.panel2.BackgroundImage = global::RoomResPlusPlus.Properties.Resources.CampusMap;
+            this.panel2.Controls.Add(this.treeView1);
+            this.panel2.Controls.Add(this.roomInfoPanel);
+            this.panel2.Controls.Add(this.button4);
+            this.panel2.Controls.Add(this.button3);
+            this.panel2.Location = new System.Drawing.Point(-14, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(6);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1014, 892);
+            this.panel2.TabIndex = 3;
             // 
             // treeView1
             // 
@@ -171,25 +184,12 @@
             this.treeView1.Cursor = System.Windows.Forms.Cursors.Default;
             this.treeView1.HotTracking = true;
             this.treeView1.Location = new System.Drawing.Point(6, 0);
-            this.treeView1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.treeView1.Margin = new System.Windows.Forms.Padding(6);
             this.treeView1.Name = "treeView1";
             this.treeView1.Size = new System.Drawing.Size(346, 54);
             this.treeView1.TabIndex = 1;
             this.treeView1.Visible = false;
             this.treeView1.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeView1_AfterSelect);
-            // 
-            // panel2
-            // 
-            this.panel2.BackgroundImage = global::RoomResPlusPlus.Properties.Resources.CampusMap;
-            this.panel2.Controls.Add(this.treeView1);
-            this.panel2.Controls.Add(this.roomInfoPanel);
-            this.panel2.Controls.Add(this.button4);
-            this.panel2.Controls.Add(this.button3);
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1000, 865);
-            this.panel2.TabIndex = 3;
             // 
             // roomInfoPanel
             // 
@@ -201,7 +201,7 @@
             this.roomInfoPanel.Controls.Add(this.button5);
             this.roomInfoPanel.Controls.Add(this.dateTimePicker1);
             this.roomInfoPanel.Location = new System.Drawing.Point(254, 0);
-            this.roomInfoPanel.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.roomInfoPanel.Margin = new System.Windows.Forms.Padding(6);
             this.roomInfoPanel.Name = "roomInfoPanel";
             this.roomInfoPanel.Size = new System.Drawing.Size(770, 371);
             this.roomInfoPanel.TabIndex = 4;
@@ -214,7 +214,7 @@
             this.reservationList.Items.AddRange(new object[] {
             "Ligma Balls"});
             this.reservationList.Location = new System.Drawing.Point(8, 23);
-            this.reservationList.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.reservationList.Margin = new System.Windows.Forms.Padding(6);
             this.reservationList.Name = "reservationList";
             this.reservationList.Size = new System.Drawing.Size(730, 179);
             this.reservationList.TabIndex = 6;
@@ -257,7 +257,7 @@
             // dateTimePicker2
             // 
             this.dateTimePicker2.Location = new System.Drawing.Point(356, 250);
-            this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(6);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(396, 31);
             this.dateTimePicker2.TabIndex = 2;
@@ -265,7 +265,7 @@
             // button5
             // 
             this.button5.Location = new System.Drawing.Point(8, 252);
-            this.button5.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.button5.Margin = new System.Windows.Forms.Padding(6);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(270, 94);
             this.button5.TabIndex = 1;
@@ -275,7 +275,7 @@
             // dateTimePicker1
             // 
             this.dateTimePicker1.Location = new System.Drawing.Point(356, 308);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(6);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(396, 31);
             this.dateTimePicker1.TabIndex = 0;
@@ -290,7 +290,7 @@
             this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Location = new System.Drawing.Point(344, 406);
-            this.button4.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.button4.Margin = new System.Windows.Forms.Padding(6);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(82, 104);
             this.button4.TabIndex = 3;
@@ -307,7 +307,7 @@
             this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Location = new System.Drawing.Point(492, 423);
-            this.button3.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.button3.Margin = new System.Windows.Forms.Padding(6);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(126, 121);
             this.button3.TabIndex = 2;
@@ -318,9 +318,9 @@
             // 
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(6);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1010, 871);
+            this.pictureBox1.Size = new System.Drawing.Size(1026, 898);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
@@ -330,9 +330,9 @@
             this.panel1.Controls.Add(this.button2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.panel1.Margin = new System.Windows.Forms.Padding(6);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(140, 865);
+            this.panel1.Size = new System.Drawing.Size(140, 892);
             this.panel1.TabIndex = 0;
             // 
             // button2
@@ -342,7 +342,7 @@
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.button2.Location = new System.Drawing.Point(0, 0);
-            this.button2.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.button2.Margin = new System.Windows.Forms.Padding(6);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(140, 135);
             this.button2.TabIndex = 0;
@@ -355,13 +355,19 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(1600, 865);
+            this.ClientSize = new System.Drawing.Size(1594, 892);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel5);
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(6);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(1700, 1000);
+            this.MinimumSize = new System.Drawing.Size(1600, 963);
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel3.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
