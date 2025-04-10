@@ -8,15 +8,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Newtonsoft.Json;
 
 namespace RoomResPlusPlus
 {
     public partial class Form1 : Form
     {
         bool treeView_invisible = true;
-        object last_selected_building;
+        Button last_selected_building;
         Dictionary<Button, String> building_buttons = new Dictionary<Button, String>();
-        
         public Form1()
         {
             InitializeComponent();
@@ -51,9 +51,9 @@ namespace RoomResPlusPlus
             if (sended is Button sender)
             {
                 panel3.Visible = true;
-                if ((last_selected_building != null) && (last_selected_building is Button temp) && (temp != sender))
+                if ((last_selected_building != null) && (last_selected_building != sender))
                 {
-                    temp.FlatAppearance.BorderColor = Color.FromArgb(0, 0, 0, 0);
+                    last_selected_building.FlatAppearance.BorderColor = Color.FromArgb(0, 0, 0, 0);
                 }
                 sender.FlatAppearance.BorderColor = Color.LightYellow;
                 last_selected_building = sender;
@@ -62,6 +62,20 @@ namespace RoomResPlusPlus
                 panel3.Visible = true;
                 label2.Text = da_building;
             }
+        }
+
+        private void floorSelection(object sender, EventArgs e)
+        {
+            if (sender is ComboBox comboTemp)
+            {
+                String floor = comboTemp.SelectedText;
+                
+            }
+        }
+
+        private void roomSelection(object sender, EventArgs e)
+        {
+            
         }
     }
 }
