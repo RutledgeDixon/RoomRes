@@ -101,6 +101,7 @@ namespace RoomResPlusPlus
                     panel1.BackColor = ColorTranslator.FromHtml("#FF8000");
                     panel5.BackColor = ColorTranslator.FromHtml(blueColor);
                     treeView1.BackColor = ColorTranslator.FromHtml(blueColor);
+                    Form1.ActiveForm.BackColor = ColorTranslator.FromHtml(blueColor);
 
                     darkMode = true;
                 }
@@ -110,6 +111,7 @@ namespace RoomResPlusPlus
                     panel1.BackColor = ColorTranslator.FromHtml(darkColor);
                     panel5.BackColor = ColorTranslator.FromHtml(darkColor);
                     treeView1.BackColor = ColorTranslator.FromHtml(darkColor);
+                    Form1.ActiveForm.BackColor = Color.Black;
 
                     darkMode = false;
                 }
@@ -145,6 +147,7 @@ namespace RoomResPlusPlus
                 count += GetTotalNodeCount(node.Nodes); // Recursively count child nodes
             }
             return count;
+        }
         private void Building_selected(Object sended, EventArgs e)
         {
             if (sended is Button sender)
