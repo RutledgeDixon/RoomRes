@@ -146,12 +146,15 @@
             // 
             this.treeView1.AccessibleName = "Menu_Tree";
             this.treeView1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.treeView1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.treeView1.CausesValidation = false;
+            this.treeView1.Cursor = System.Windows.Forms.Cursors.Default;
+            this.treeView1.HotTracking = true;
             this.treeView1.Location = new System.Drawing.Point(0, 0);
             this.treeView1.Name = "treeView1";
-            this.treeView1.Size = new System.Drawing.Size(121, 453);
+            this.treeView1.Size = new System.Drawing.Size(175, 30);
             this.treeView1.TabIndex = 1;
             this.treeView1.Visible = false;
+            this.treeView1.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeView1_AfterSelect);
             // 
             // panel2
             // 
