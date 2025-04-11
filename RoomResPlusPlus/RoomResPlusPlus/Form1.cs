@@ -28,8 +28,8 @@ namespace RoomResPlusPlus
             building_buttons.Add(button3, "ASC"); building_buttons.Add(button4, "Library");
             button3.FlatAppearance.BorderColor = Color.FromArgb(0, 0, 0, 0);
             button4.FlatAppearance.BorderColor = Color.FromArgb(0, 0, 0, 0);
-            var jason = File.ReadAllText("Data/mock_event_rooms.json");
-            jsonData = JsonConvert.DeserializeObject<Dictionary<String, Array>>(jason);
+            //var jason = File.ReadAllText("Data/mock_event_rooms.json");
+            //jsonData = JsonConvert.DeserializeObject<Dictionary<String, Array>>(jason);
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -173,14 +173,14 @@ namespace RoomResPlusPlus
                 building_buttons.TryGetValue(sender, out da_building);
                 panel3.Visible = true;
                 label2.Text = da_building;
-                Array dingy;
-                jsonData.TryGetValue(da_building, out dingy);
-                for (int i = 0; i < dingy.Length; i++)
-                {
-                    String temporary = "Floor " + String.Concat(i + 1);
-                    comboBox1.Items.Add(temporary);
-                }
-                comboBox1.SelectedIndex = 0;
+                //Array dingy;
+                //jsonData.TryGetValue(da_building, out dingy);
+                //for (int i = 0; i < dingy.Length; i++)
+                //{
+                //    String temporary = "Floor " + String.Concat(i + 1);
+                //    comboBox1.Items.Add(temporary);
+                //}
+                //comboBox1.SelectedIndex = 0;
                 //floorSelection(comboBox1);
             }
         }
