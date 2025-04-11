@@ -62,7 +62,7 @@ namespace RoomResPlusPlus
             this.datePicker = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.datePanel = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
+            this.DateLabel = new System.Windows.Forms.Label();
             this.form1BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel3.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -372,7 +372,7 @@ namespace RoomResPlusPlus
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.DateLabel);
             this.panel1.Controls.Add(this.displayMonth);
             this.panel1.Controls.Add(this.displayDay);
             this.panel1.Controls.Add(this.displayYear);
@@ -412,7 +412,6 @@ namespace RoomResPlusPlus
             this.displayDay.TabIndex = 6;
             this.displayDay.Text = "1";
             this.displayDay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.displayDay.Click += new System.EventHandler(this.label4_Click);
             // 
             // displayYear
             // 
@@ -470,16 +469,16 @@ namespace RoomResPlusPlus
             // 
             // label4
             // 
-            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(40)))));
-            this.label4.Font = new System.Drawing.Font("MS Reference Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.SystemColors.Window;
-            this.label4.Location = new System.Drawing.Point(12, 416);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(80, 23);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "Date:";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.DateLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.DateLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(40)))));
+            this.DateLabel.Font = new System.Drawing.Font("MS Reference Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DateLabel.ForeColor = System.Drawing.SystemColors.Window;
+            this.DateLabel.Location = new System.Drawing.Point(12, 416);
+            this.DateLabel.Name = "label4";
+            this.DateLabel.Size = new System.Drawing.Size(80, 23);
+            this.DateLabel.TabIndex = 0;
+            this.DateLabel.Text = "Date:";
+            this.DateLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // form1BindingSource
             // 
@@ -547,7 +546,7 @@ namespace RoomResPlusPlus
         private System.Windows.Forms.ListBox reservationList;
         private System.Windows.Forms.Label errorLabel;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label DateLabel;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
