@@ -16,6 +16,7 @@ namespace RoomResPlusPlus
     {
         bool treeView_invisible = true;
         bool darkMode = true;
+        DateTime pickedDate = DateTime.Now; // instantiate the date to now
 
         Button last_selected_building;
         Dictionary<Button, String> building_buttons = new Dictionary<Button, String>();
@@ -54,6 +55,11 @@ namespace RoomResPlusPlus
 
             // Handle AfterSelect event
             treeView1.AfterSelect += treeView1_AfterSelect;
+
+            //display today's date on the label
+            displayYear.Text = pickedDate.Year.ToString().Substring(2);
+            displayMonth.Text = pickedDate.Month.ToString();
+            displayDay.Text = pickedDate.Day.ToString();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -178,6 +184,34 @@ namespace RoomResPlusPlus
         private void roomSelection(object sender, EventArgs e)
         {
             
+        }
+
+        private void datePicker_Click(object sender, EventArgs e)
+        {
+            if(dateCalendar.Visible == false)
+            {
+                dateCalendar.Visible = true;
+                datePicker.Text = "Enter";
+            }
+            else
+            {
+                dateCalendar.Visible = false;
+                datePicker.Text = "Change Date";
+                pickedDate = dateCalendar.SelectionStart;
+                displayYear.Text = pickedDate.Year.ToString().Substring(2);
+                displayMonth.Text = pickedDate.Month.ToString();
+                displayDay.Text = pickedDate.Day.ToString();
+            }
+        }
+
+        private void displayDate_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
