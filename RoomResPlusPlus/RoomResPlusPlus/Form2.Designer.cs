@@ -1,4 +1,7 @@
-﻿namespace RoomResPlusPlus
+﻿using System.Drawing;
+using System.Windows.Forms;
+
+namespace RoomResPlusPlus
 {
     partial class Form2
     {
@@ -146,6 +149,8 @@
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
+
+            
 
         }
 

@@ -1,4 +1,7 @@
-﻿namespace RoomResPlusPlus
+﻿using System.Drawing;
+using System.Windows.Forms;
+
+namespace RoomResPlusPlus
 {
     partial class Form1
     {
@@ -39,6 +42,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.dateCalendar = new System.Windows.Forms.MonthCalendar();
             this.treeView1 = new System.Windows.Forms.TreeView();
             this.roomInfoPanel = new System.Windows.Forms.Panel();
             this.reservationList = new System.Windows.Forms.ListBox();
@@ -52,7 +56,13 @@
             this.button3 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.displayMonth = new System.Windows.Forms.Label();
+            this.displayDay = new System.Windows.Forms.Label();
+            this.displayYear = new System.Windows.Forms.Label();
+            this.datePicker = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.datePanel = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
             this.form1BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel3.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -83,29 +93,30 @@
             this.panel3.Controls.Add(this.comboBox1);
             this.panel3.Controls.Add(this.label2);
             this.panel3.Controls.Add(this.label1);
-            this.panel3.Location = new System.Drawing.Point(1160, 0);
-            this.panel3.Margin = new System.Windows.Forms.Padding(6);
+            this.panel3.Location = new System.Drawing.Point(874, 0);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(434, 890);
+            this.panel3.Size = new System.Drawing.Size(326, 691);
+
             this.panel3.TabIndex = 2;
             this.panel3.Visible = false;
             // 
             // roomFlowPanel
             // 
-            this.roomFlowPanel.Location = new System.Drawing.Point(12, 348);
-            this.roomFlowPanel.Margin = new System.Windows.Forms.Padding(6);
+            this.roomFlowPanel.Location = new System.Drawing.Point(9, 278);
+            this.roomFlowPanel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.roomFlowPanel.Name = "roomFlowPanel";
-            this.roomFlowPanel.Size = new System.Drawing.Size(416, 494);
+            this.roomFlowPanel.Size = new System.Drawing.Size(312, 395);
             this.roomFlowPanel.TabIndex = 4;
             // 
             // label3
             // 
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label3.Location = new System.Drawing.Point(4, 208);
-            this.label3.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label3.Location = new System.Drawing.Point(3, 166);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(424, 133);
+            this.label3.Size = new System.Drawing.Size(318, 106);
             this.label3.TabIndex = 3;
             this.label3.Text = "Select a highlighted room for more details";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -115,10 +126,11 @@
             this.comboBox1.AccessibleName = "FloorSelector";
             this.comboBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(92, 162);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(6);
+            this.comboBox1.Location = new System.Drawing.Point(69, 129);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(238, 33);
+            this.comboBox1.Size = new System.Drawing.Size(180, 28);
+
             this.comboBox1.TabIndex = 2;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.floorSelection);
             // 
@@ -127,10 +139,11 @@
             this.label2.Dock = System.Windows.Forms.DockStyle.Top;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.Location = new System.Drawing.Point(0, 62);
-            this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label2.Location = new System.Drawing.Point(0, 49);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(434, 94);
+            this.label2.Size = new System.Drawing.Size(326, 75);
+
             this.label2.TabIndex = 1;
             this.label2.Text = "Location Name";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -141,9 +154,10 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label1.Location = new System.Drawing.Point(0, 0);
-            this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(434, 62);
+            this.label1.Size = new System.Drawing.Size(326, 49);
+
             this.label1.TabIndex = 0;
             this.label1.Text = "Building Selected:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -157,10 +171,11 @@
             this.panel5.Controls.Add(this.panel2);
             this.panel5.Controls.Add(this.pictureBox1);
             this.panel5.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.panel5.Location = new System.Drawing.Point(154, 0);
-            this.panel5.Margin = new System.Windows.Forms.Padding(6);
+            this.panel5.Location = new System.Drawing.Point(116, 0);
+            this.panel5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1026, 898);
+            this.panel5.Size = new System.Drawing.Size(758, 697);
+
             this.panel5.TabIndex = 3;
             // 
             // panel2
@@ -183,16 +198,27 @@
             this.treeView1.CausesValidation = false;
             this.treeView1.Cursor = System.Windows.Forms.Cursors.Default;
             this.treeView1.HotTracking = true;
-            this.treeView1.Location = new System.Drawing.Point(6, 0);
-            this.treeView1.Margin = new System.Windows.Forms.Padding(6);
+            this.treeView1.Location = new System.Drawing.Point(0, 0);
+            this.treeView1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.treeView1.Name = "treeView1";
-            this.treeView1.Size = new System.Drawing.Size(346, 54);
+            this.treeView1.Size = new System.Drawing.Size(260, 44);
+
             this.treeView1.TabIndex = 1;
             this.treeView1.Visible = false;
             this.treeView1.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeView1_AfterSelect);
             // 
             // roomInfoPanel
             // 
+            this.panel2.BackgroundImage = global::RoomResPlusPlus.Properties.Resources.CampusMap;
+            this.panel2.Controls.Add(this.dateCalendar);
+            this.panel2.Controls.Add(this.roomInfoPanel);
+            this.panel2.Controls.Add(this.button4);
+            this.panel2.Controls.Add(this.button3);
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(750, 692);
+            this.panel2.TabIndex = 3;
             this.roomInfoPanel.Controls.Add(this.reservationList);
             this.roomInfoPanel.Controls.Add(this.errorLabel);
             this.roomInfoPanel.Controls.Add(this.label5);
@@ -280,6 +306,22 @@
             this.dateTimePicker1.Size = new System.Drawing.Size(396, 31);
             this.dateTimePicker1.TabIndex = 0;
             // 
+            // dateCalendar
+            // 
+            this.dateCalendar.Location = new System.Drawing.Point(9, 430);
+            this.dateCalendar.Name = "dateCalendar";
+            this.dateCalendar.TabIndex = 0;
+            this.dateCalendar.Visible = false;
+            // 
+            // roomInfoPanel
+            // 
+            this.roomInfoPanel.Location = new System.Drawing.Point(190, 0);
+            this.roomInfoPanel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.roomInfoPanel.Name = "roomInfoPanel";
+            this.roomInfoPanel.Size = new System.Drawing.Size(578, 297);
+            this.roomInfoPanel.TabIndex = 4;
+            this.roomInfoPanel.Visible = false;
+            // 
             // button4
             // 
             this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
@@ -289,10 +331,11 @@
             this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Location = new System.Drawing.Point(344, 406);
-            this.button4.Margin = new System.Windows.Forms.Padding(6);
+            this.button4.Location = new System.Drawing.Point(258, 325);
+            this.button4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(82, 104);
+            this.button4.Size = new System.Drawing.Size(62, 83);
+
             this.button4.TabIndex = 3;
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.Building_selected);
@@ -306,10 +349,11 @@
             this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Location = new System.Drawing.Point(492, 423);
-            this.button3.Margin = new System.Windows.Forms.Padding(6);
+            this.button3.Location = new System.Drawing.Point(369, 338);
+            this.button3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(126, 121);
+            this.button3.Size = new System.Drawing.Size(94, 97);
+
             this.button3.TabIndex = 2;
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.Building_selected);
@@ -318,22 +362,85 @@
             // 
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(6);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1026, 898);
+            this.pictureBox1.Size = new System.Drawing.Size(758, 697);
+
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.displayMonth);
+            this.panel1.Controls.Add(this.displayDay);
+            this.panel1.Controls.Add(this.displayYear);
+            this.panel1.Controls.Add(this.datePicker);
             this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.datePanel);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(6);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(140, 892);
+            this.panel1.Size = new System.Drawing.Size(105, 692);
+
             this.panel1.TabIndex = 0;
+            // 
+            // displayMonth
+            // 
+            this.displayMonth.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.displayMonth.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(40)))));
+            this.displayMonth.Font = new System.Drawing.Font("MS Reference Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.displayMonth.ForeColor = System.Drawing.SystemColors.Window;
+            this.displayMonth.Location = new System.Drawing.Point(25, 450);
+            this.displayMonth.Name = "displayMonth";
+            this.displayMonth.Size = new System.Drawing.Size(56, 34);
+            this.displayMonth.TabIndex = 7;
+            this.displayMonth.Text = "1";
+            this.displayMonth.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // displayDay
+            // 
+            this.displayDay.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.displayDay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(40)))));
+            this.displayDay.Font = new System.Drawing.Font("MS Reference Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.displayDay.ForeColor = System.Drawing.SystemColors.Window;
+            this.displayDay.Location = new System.Drawing.Point(25, 500);
+            this.displayDay.Name = "displayDay";
+            this.displayDay.Size = new System.Drawing.Size(56, 34);
+            this.displayDay.TabIndex = 6;
+            this.displayDay.Text = "1";
+            this.displayDay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.displayDay.Click += new System.EventHandler(this.label4_Click);
+            // 
+            // displayYear
+            // 
+            this.displayYear.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.displayYear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(40)))));
+            this.displayYear.Font = new System.Drawing.Font("MS Reference Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.displayYear.ForeColor = System.Drawing.SystemColors.Window;
+            this.displayYear.Location = new System.Drawing.Point(25, 550);
+            this.displayYear.Name = "displayYear";
+            this.displayYear.Size = new System.Drawing.Size(56, 34);
+            this.displayYear.TabIndex = 5;
+            this.displayYear.Text = "84";
+            this.displayYear.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.displayYear.Click += new System.EventHandler(this.displayDate_Click);
+            // 
+            // datePicker
+            // 
+            this.datePicker.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.datePicker.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(40)))));
+            this.datePicker.Font = new System.Drawing.Font("MS Reference Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.datePicker.ForeColor = System.Drawing.Color.White;
+            this.datePicker.Location = new System.Drawing.Point(3, 602);
+            this.datePicker.Name = "datePicker";
+            this.datePicker.Size = new System.Drawing.Size(99, 87);
+            this.datePicker.TabIndex = 0;
+            this.datePicker.Text = "Change Date";
+            this.datePicker.UseVisualStyleBackColor = false;
+            this.datePicker.Click += new System.EventHandler(this.datePicker_Click);
             // 
             // button2
             // 
@@ -342,13 +449,41 @@
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.button2.Location = new System.Drawing.Point(0, 0);
-            this.button2.Margin = new System.Windows.Forms.Padding(6);
+            this.button2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(140, 135);
+            this.button2.Size = new System.Drawing.Size(105, 108);
+
             this.button2.TabIndex = 0;
             this.button2.Text = ">";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // datePanel
+            // 
+            this.datePanel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.datePanel.BackColor = System.Drawing.Color.Transparent;
+            this.datePanel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.datePanel.Location = new System.Drawing.Point(12, 414);
+            this.datePanel.Name = "datePanel";
+            this.datePanel.Size = new System.Drawing.Size(80, 182);
+            this.datePanel.TabIndex = 0;
+            // 
+            // label4
+            // 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(40)))));
+            this.label4.Font = new System.Drawing.Font("MS Reference Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.Window;
+            this.label4.Location = new System.Drawing.Point(12, 416);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(80, 23);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "Date:";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // form1BindingSource
+            // 
+            this.form1BindingSource.DataSource = typeof(RoomResPlusPlus.Form1);
             // 
             // Form1
             // 
@@ -402,6 +537,13 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Panel roomInfoPanel;
         private System.Windows.Forms.FlowLayoutPanel roomFlowPanel;
+        private System.Windows.Forms.MonthCalendar dateCalendar;
+        private System.Windows.Forms.Button datePicker;
+        private System.Windows.Forms.Label displayYear;
+        private System.Windows.Forms.Label displayMonth;
+        private System.Windows.Forms.Label displayDay;
+        private Panel datePanel;
+        private Label label4;
         private System.Windows.Forms.ListBox reservationList;
         private System.Windows.Forms.Label errorLabel;
         private System.Windows.Forms.Label label5;
