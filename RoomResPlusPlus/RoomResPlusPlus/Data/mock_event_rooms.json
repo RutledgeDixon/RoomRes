@@ -1,0 +1,199 @@
+{
+  "ASC": [
+      [
+            {
+              "name": "Room 165",
+              "bookings": [
+                {
+                  "event": "Intro to Robotics",
+                  "start_time": "2025-04-09T09:00:00",
+                  "end_time": "2025-04-09T10:30:00",
+                  "organizer": "Dr. Carter"
+                },
+                {
+                  "event": "Faculty Meeting",
+                  "start_time": "2025-04-09T13:00:00",
+                  "end_time": "2025-04-09T14:15:00",
+                  "organizer": "Dean Walker"
+                }
+              ]
+            },
+            {
+              "name": "Room 170",
+              "bookings": [
+                {
+                  "event": "Engineering Design",
+                  "start_time": "2025-04-09T10:45:00",
+                  "end_time": "2025-04-09T12:15:00",
+                  "organizer": "Prof. Nguyen"
+                },
+                {
+                  "event": "Advising Session",
+                  "start_time": "2025-04-09T14:30:00",
+                  "end_time": "2025-04-09T15:45:00",
+                  "organizer": "Emily Stone"
+                }
+              ]
+            }
+      ],
+      [
+            {
+              "name": "Room 244",
+              "bookings": [
+                {
+                  "event": "AI Ethics Talk",
+                  "start_time": "2025-04-09T09:15:00",
+                  "end_time": "2025-04-09T10:45:00",
+                  "organizer": "Jordan Miles"
+                },
+                {
+                  "event": "Senior Capstone",
+                  "start_time": "2025-04-09T11:00:00",
+                  "end_time": "2025-04-09T12:30:00",
+                  "organizer": "Laura Chen"
+                }
+              ]
+            },
+            {
+              "name": "Room 245",
+              "bookings": [
+                {
+                  "event": "Web Dev Workshop",
+                  "start_time": "2025-04-09T13:00:00",
+                  "end_time": "2025-04-09T14:30:00",
+                  "organizer": "Chris J."
+                },
+                {
+                  "event": "Cloud Computing",
+                  "start_time": "2025-04-09T15:00:00",
+                  "end_time": "2025-04-09T16:30:00",
+                  "organizer": "Nina Patel"
+                }
+              ]
+            },
+            {
+              "name": "Room 246",
+              "bookings": [
+                {
+                  "event": "Cybersecurity Brief",
+                  "start_time": "2025-04-09T09:00:00",
+                  "end_time": "2025-04-09T10:30:00",
+                  "organizer": "Samuel Lee"
+                },
+                {
+                  "event": "Tech Q&A",
+                  "start_time": "2025-04-09T11:00:00",
+                  "end_time": "2025-04-09T12:15:00",
+                  "organizer": "Riley Hunt"
+                }
+              ]
+            },
+            {
+              "name": "Room 231",
+              "bookings": [
+                {
+                  "event": "Ethics Debate",
+                  "start_time": "2025-04-09T13:30:00",
+                  "end_time": "2025-04-09T15:00:00",
+                  "organizer": "Tara Wilson"
+                },
+                {
+                  "event": "Student Roundtable",
+                  "start_time": "2025-04-09T15:15:00",
+                  "end_time": "2025-04-09T16:45:00",
+                  "organizer": "Zane Parker"
+                }
+              ]
+            },
+            {
+              "name": "Room 232",
+              "bookings": [
+                {
+                  "event": "Thesis Prep",
+                  "start_time": "2025-04-09T09:30:00",
+                  "end_time": "2025-04-09T11:00:00",
+                  "organizer": "Ana Lopez"
+                },
+                {
+                  "event": "Startup Panel",
+                  "start_time": "2025-04-09T12:00:00",
+                  "end_time": "2025-04-09T13:30:00",
+                  "organizer": "Ben Riley"
+                }
+              ]
+            },
+            {
+              "name": "Room 225",
+              "bookings": [
+                {
+                  "event": "Internship Info Session",
+                  "start_time": "2025-04-09T10:00:00",
+                  "end_time": "2025-04-09T11:30:00",
+                  "organizer": "Career Services"
+                },
+                {
+                  "event": "Resume Workshop",
+                  "start_time": "2025-04-09T13:00:00",
+                  "end_time": "2025-04-09T14:30:00",
+                  "organizer": "Career Services"
+                }
+              ]
+            }
+          ]
+    ],
+  "Library": [
+    [
+    {
+              "name": "Learning Lab",
+              "bookings": [
+                {
+                  "event": "Study Skills",
+                  "start_time": "2025-04-09T08:30:00",
+                  "end_time": "2025-04-09T10:00:00",
+                  "organizer": "Library Staff"
+                },
+                {
+                  "event": "Citation Workshop",
+                  "start_time": "2025-04-09T11:00:00",
+                  "end_time": "2025-04-09T12:30:00",
+                  "organizer": "Writing Center"
+                }
+              ]
+            },
+            {
+              "name": "Collab Room 1",
+              "bookings": [
+                {
+                  "event": "Group Study",
+                  "start_time": "2025-04-09T10:00:00",
+                  "end_time": "2025-04-09T11:30:00",
+                  "organizer": "Student Senate"
+                },
+                {
+                  "event": "Peer Tutoring",
+                  "start_time": "2025-04-09T13:00:00",
+                  "end_time": "2025-04-09T14:30:00",
+                  "organizer": "Tutoring Center"
+                }
+              ]
+            },
+            {
+              "name": "Collab Room 2",
+              "bookings": [
+                {
+                  "event": "Film Analysis Group",
+                  "start_time": "2025-04-09T09:00:00",
+                  "end_time": "2025-04-09T10:45:00",
+                  "organizer": "Humanities Dept."
+                },
+                {
+                  "event": "Writing Lab",
+                  "start_time": "2025-04-09T11:15:00",
+                  "end_time": "2025-04-09T12:45:00",
+                  "organizer": "Writing Center"
+                }
+              ]
+            }
+          ]
+  ]
+}

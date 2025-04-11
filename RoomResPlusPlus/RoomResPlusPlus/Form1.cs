@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Drawing.Printing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,6 +18,7 @@ namespace RoomResPlusPlus
         bool treeView_invisible = true;
         bool darkMode = true;
         DateTime pickedDate = DateTime.Now; // instantiate the date to now
+        Dictionary<String, Array> jsonData;
 
         Button last_selected_building;
         Dictionary<Button, String> building_buttons = new Dictionary<Button, String>();
@@ -26,6 +28,8 @@ namespace RoomResPlusPlus
             building_buttons.Add(button3, "ASC"); building_buttons.Add(button4, "Library");
             button3.FlatAppearance.BorderColor = Color.FromArgb(0, 0, 0, 0);
             button4.FlatAppearance.BorderColor = Color.FromArgb(0, 0, 0, 0);
+            var jason = File.ReadAllText("Data/mock_event_rooms.json");
+            jsonData = JsonConvert.DeserializeObject<Dictionary<String, Array>>(jason);
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -169,15 +173,23 @@ namespace RoomResPlusPlus
                 building_buttons.TryGetValue(sender, out da_building);
                 panel3.Visible = true;
                 label2.Text = da_building;
+                Array dingy;
+                jsonData.TryGetValue(da_building, out dingy);
+                for (int i = 0; i < dingy.Length; i++)
+                {
+                    String temporary = "Floor " + String.Concat(i + 1);
+                    comboBox1.Items.Add(temporary);
+                }
+                comboBox1.SelectedIndex = 0;
+                //floorSelection(comboBox1);
             }
         }
 
-        private void floorSelection(object sender, EventArgs e)
+        private void floorSelection(object sender, EventArgs e = null)
         {
             if (sender is ComboBox comboTemp)
             {
                 String floor = comboTemp.SelectedText;
-                
             }
         }
 
